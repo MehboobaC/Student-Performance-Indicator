@@ -9,6 +9,7 @@ def get_requirements(file_path):
         if HYPHEN_E_DOT in requirements:
             requirements.remove(HYPHEN_E_DOT)
         return(requirements)
+
 setup( 
     name = "Students Peformance Indicator",
     version = "0.0.1",
