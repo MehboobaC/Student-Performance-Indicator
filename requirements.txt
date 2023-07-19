@@ -5,6 +5,4 @@ seaborn
 scipy
 scikit-learn
 dill
-# xgboost
-# catboost
 # -e .

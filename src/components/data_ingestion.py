@@ -35,14 +35,15 @@ class DataIngestion:
             
             logging.info("Data ingestion completed")
 
-            return (self.ingestion_config.train_data_path, self.ingestion_config.test_data_path)
+            return (self.ingestion_config.train_data_path, 
+                    self.ingestion_config.test_data_path)
 
         except Exception as e:
             raise CustomException(e, sys)
         
 if __name__ == "__main__":
     obj = DataIngestion()
-    x, y = obj.initiate_data_ingestion()
+    train_data_path, test_data_path = obj.initiate_data_ingestion()
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(x, y)
+    data_transformation.initiate_data_transformation(train_data_path, test_data_path)
 
